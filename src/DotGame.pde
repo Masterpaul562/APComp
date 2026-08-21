@@ -1,3 +1,4 @@
+//Paul Tokhtuev
 class DotObject {
   int x,y;
   
