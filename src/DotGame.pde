@@ -9,7 +9,7 @@ class DotObject {
   }
   
   void Display(){
-   rect(x,y,5,5); 
+   rect(x,y,20,20); 
   }
   void Move(){
     if(key == 'w'||key =='W'){ y -=5; }
