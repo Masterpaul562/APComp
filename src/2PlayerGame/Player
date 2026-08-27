@@ -1,0 +1,23 @@
+using System;
+
+
+public class Player 
+{
+    private int health;
+    private int x,y;
+    private int score;
+    private string name; 
+    
+
+    public Player() 
+    {
+        Random rnd = new Random();
+        health = 10;
+        x = rnd.Next(1-10);
+        y = rnd.Next(1-10);
+
+       
+        
+    }
+
+}
