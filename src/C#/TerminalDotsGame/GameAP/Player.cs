@@ -26,7 +26,7 @@ public bool DeathCheck()
     return true;
     }
     else{
-        return;
+        return false;
     }
 }
 public int HealthDisplay()
