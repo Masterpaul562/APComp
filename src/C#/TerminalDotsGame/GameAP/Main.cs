@@ -127,7 +127,7 @@ class Entry
             if (player2.x == player1.x && player2.y == player1.y)
             {
                 player1.TakeDamage(1);
-                if (player1.DeathCheck)
+                if (player1.DeathCheck())
                 {
                     Console.WriteLine(player2.name + " " + "has won");
                     Environment.Exit(0);
