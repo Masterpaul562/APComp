@@ -14,11 +14,12 @@ class Entry
 
     static void Display()
     {
-
+       // bool sameY = if(player1.y == player2.y)
         for (int i = 0; i < stripeCollection.Count; i++)
         {
             char[] player2Line = new char[10] { '|', '|', '|', '|', '|', '|', '|', '|', '|', '|' };
             char[] player1Line = new char[10] { '|', '|', '|', '|', '|', '|', '|', '|', '|', '|' };
+            
             if (i == player1.y)
             {
 
