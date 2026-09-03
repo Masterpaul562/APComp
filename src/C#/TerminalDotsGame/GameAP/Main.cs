@@ -116,14 +116,23 @@ class Entry
     }
     static void Player1Move()
     {
-        player1.Move(Console.ReadLine() ?? string.Empty);
+        
+        if(player1.Move(Console.ReadLine() ?? string.Empty) == false)
+        {
+            Player1Move();
+            return;
+        }
         playerOneTurn = false;
         DamageCheck(true);
         Display();
     }
     static void Player2Move()
     {
-        player1.Move(Console.ReadLine() ?? string.Empty);
+        if(player2.Move(Console.ReadLine() ?? string.Empty))
+        {
+            Player2Move();
+            return;
+        }
         playerOneTurn = true;
         DamageCheck(false);
         Display();
