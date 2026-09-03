@@ -130,7 +130,7 @@ class Entry
     }
     static void Player2Move()
     {
-        if(player2.Move(Console.ReadLine() ?? string.Empty))
+        if(player2.Move(Console.ReadLine() ?? string.Empty) == false)
         {
             Player2Move();
             return;
