@@ -18,7 +18,7 @@ class Entry
             char[] player1Line = new char[10] { '|', '|', '|', '|', '|', '|', '|', '|', '|', '|' };
             char[] sameLine = new char[10] { '|', '|', '|', '|', '|', '|', '|', '|', '|', '|' };
         bool sameY = player1.y == player2.y ? true:false;
-        Console.WriteLine(sameY);
+        
 
         for (int i = 0; i < stripeCollection.Count; i++)
         {
@@ -61,7 +61,7 @@ class Entry
             {
                 string playerWhole = new string(player1Line);
                 Console.WriteLine(playerWhole);
-            }else if ( sameY)
+            }else if ( i == player1.y && sameY)
             {
                 string playerWhole = new string(sameLine);
                 Console.WriteLine(playerWhole);
