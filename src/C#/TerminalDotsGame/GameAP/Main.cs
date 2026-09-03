@@ -121,12 +121,11 @@ class Entry
         {
             Player1Move();
             return;
-        }else 
-        {    
+        } 
         playerOneTurn = false;
         DamageCheck(true);
         Display();
-        }
+        
     }
     static void Player2Move()
     {
@@ -134,12 +133,11 @@ class Entry
         {
             Player2Move();
             return;
-        }else
-        {
+        }
         playerOneTurn = true;
         DamageCheck(false);
         Display();
-        }
+        
     }
 
     static void DamageCheck(bool isPlayerOne)
@@ -159,7 +157,7 @@ class Entry
                 Random rnd = new Random();
                 player1.x = rnd.Next(0, 10);
                 player1.y = rnd.Next(0, 10);
-                Console.WriteLine(player1.HealthDisplay());
+                Console.WriteLine("player2's health " + player1.HealthDisplay());
             }
         }
         else if (isPlayerOne)
@@ -174,7 +172,7 @@ class Entry
 
 
                 }
-                Console.WriteLine(player2.HealthDisplay());
+                Console.WriteLine("player2's health " + player2.HealthDisplay());
                 Random rnd = new Random();
                 player2.x = rnd.Next(0, 10);
                 player2.y = rnd.Next(0, 10);
