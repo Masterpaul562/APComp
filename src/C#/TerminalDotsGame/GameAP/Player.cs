@@ -38,7 +38,7 @@ public void SetName(string setName)
         name = setName;
     }
 
-public void Move(string dir)
+public bool Move(string dir)
     {
         Console.WriteLine(x +" " + y);
         //playerOneTurn = false;
@@ -72,7 +72,11 @@ public void Move(string dir)
             {
                 y =0;
             }
+        }else 
+        {
+        return false;  
         }
+     return true;
         Console.WriteLine(x +" " + y);
         // if(player1.x == player2.x && player1.y == player2.y)
         // {
