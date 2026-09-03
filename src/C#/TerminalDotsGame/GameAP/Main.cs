@@ -50,7 +50,7 @@ class Entry
                     }
                 }
             }
-
+        
 
             if (i == player2.y && !sameY)
             {
@@ -72,7 +72,7 @@ class Entry
 
                 Console.WriteLine(wholeLine);
             }
-        
+        }
         //Console.WriteLine(player1.x +" " + player1.y);
         //Console.WriteLine(player2.x +" " + player2.y);
         if (playerOneTurn)
@@ -84,6 +84,8 @@ class Entry
             Player2Move();
         }
     }
+
+
     static void EntryWelcome()
     {
 
