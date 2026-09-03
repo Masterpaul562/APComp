@@ -9,14 +9,14 @@ public class Player
     public Player() 
     {
         Random rnd = new Random();
-        health = 10;
+        health = 5;
         x = rnd.Next(0,10);
         y = rnd.Next(0,10);
        
     }
  public void TakeDamage(int amount)
  {
-    health =- amount;
+    health = health - amount;
  }
 
 public bool DeathCheck()
