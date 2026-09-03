@@ -121,10 +121,12 @@ class Entry
         {
             Player1Move();
             return;
-        }
+        }else 
+        {    
         playerOneTurn = false;
         DamageCheck(true);
         Display();
+        }
     }
     static void Player2Move()
     {
@@ -132,11 +134,12 @@ class Entry
         {
             Player2Move();
             return;
-        }
+        }else
+        {
         playerOneTurn = true;
         DamageCheck(false);
         Display();
-
+        }
     }
 
     static void DamageCheck(bool isPlayerOne)
