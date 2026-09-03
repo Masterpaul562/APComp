@@ -72,9 +72,6 @@ public void Move(string dir)
             {
                 y =0;
             }
-        }else
-        {
-            Move(dir);
         }
         Console.WriteLine(x +" " + y);
         // if(player1.x == player2.x && player1.y == player2.y)
