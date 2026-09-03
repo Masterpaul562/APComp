@@ -1,4 +1,4 @@
-﻿
+
 
 class Entry
 {
@@ -16,12 +16,14 @@ class Entry
     {
             char[] player2Line = new char[10] { '|', '|', '|', '|', '|', '|', '|', '|', '|', '|' };
             char[] player1Line = new char[10] { '|', '|', '|', '|', '|', '|', '|', '|', '|', '|' };
-       // bool sameY = if(player1.y == player2.y)
+            char[] sameLine = new char[10] { '|', '|', '|', '|', '|', '|', '|', '|', '|', '|' };
+        bool sameY = player1.y == player2.y ? true:false;
+        Console.WriteLine(sameY);
+
         for (int i = 0; i < stripeCollection.Count; i++)
         {
             
-          //  if(!sameY)
-           // {
+            
             if (i == player1.y)
             {
 
@@ -31,6 +33,7 @@ class Entry
                     if (j == player1.x)
                     {
                         player1Line[j] = '@';
+                        sameLine[j] = '@';
                     }
                 }
             }
@@ -43,19 +46,24 @@ class Entry
                     if (j == player2.x)
                     {
                         player2Line[j] = '*';
+                        sameLine[j] = '*';
                     }
                 }
             }
 
 
-            if (i == player2.y)
+            if (i == player2.y && !sameY)
             {
                 string playerWhole = new string(player2Line);
                 Console.WriteLine(playerWhole);
             }
-            else if (i == player1.y)
+            else if (i == player1.y && !sameY)
             {
                 string playerWhole = new string(player1Line);
+                Console.WriteLine(playerWhole);
+            }else if ( sameY)
+            {
+                string playerWhole = new string(sameLine);
                 Console.WriteLine(playerWhole);
             }
             else
@@ -64,12 +72,7 @@ class Entry
 
                 Console.WriteLine(wholeLine);
             }
-        //} else 
-            //{
-            
-    
-            //}
-        }
+        
         //Console.WriteLine(player1.x +" " + player1.y);
         //Console.WriteLine(player2.x +" " + player2.y);
         if (playerOneTurn)
