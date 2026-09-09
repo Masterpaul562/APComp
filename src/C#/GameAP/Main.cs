@@ -21,12 +21,12 @@ class Entry
         }  
         
        // bool sameY = true;
-           //  for(int t = 0; t < players.Count; t++)
-          //  {
-                Player player = players[0];
+            for(int t = 0; t < players.Count; t++)
+           {
+                Player player = players[t];
                 stripeCollection[player.y][player.x] = player.symbol;
                 Console.WriteLine("Position: " + player.x + " " + player.y);
-          //  }
+            }
             
         for (int i = 0; i < stripeCollection.Count; i++)
         {
