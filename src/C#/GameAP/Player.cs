@@ -2,7 +2,7 @@ public class Player
 {
      private int health =5;
     public int x,y;
-    private int score = 0;
+
     public string name = "Player"; 
 
     public char symbol;
@@ -57,7 +57,7 @@ public void SetName(string setName)
         name = setName;
     }
 
-public bool Move(string dir)
+public bool Move(string dir, Player otherPlayer)
     {
         Console.WriteLine(x +" " + y);
         //playerOneTurn = false;
@@ -98,7 +98,7 @@ public bool Move(string dir)
         }
 
      return true;
-        Console.WriteLine(x +" " + y);
+        
         // if(player1.x == player2.x && player1.y == player2.y)
         // {
         //     player2.TakeDamage(1);

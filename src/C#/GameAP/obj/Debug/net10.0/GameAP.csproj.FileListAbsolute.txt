@@ -26,3 +26,17 @@ C:\Users\denni\downloads\ApComp-main\src\C#\TerminalDotsGame\GameAP\obj\Debug\ne
 C:\Users\denni\downloads\ApComp-main\src\C#\TerminalDotsGame\GameAP\obj\Debug\net10.0\GameAP.pdb
 C:\Users\denni\downloads\ApComp-main\src\C#\TerminalDotsGame\GameAP\obj\Debug\net10.0\GameAP.genruntimeconfig.cache
 C:\Users\denni\downloads\ApComp-main\src\C#\TerminalDotsGame\GameAP\obj\Debug\net10.0\ref\GameAP.dll
+C:\Users\denni\Downloads\APComp-main\src\C#\GameAP\obj\Debug\net10.0\GameAP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\denni\Downloads\APComp-main\src\C#\GameAP\obj\Debug\net10.0\GameAP.AssemblyInfoInputs.cache
+C:\Users\denni\Downloads\APComp-main\src\C#\GameAP\obj\Debug\net10.0\GameAP.AssemblyInfo.cs
+C:\Users\denni\Downloads\APComp-main\src\C#\GameAP\obj\Debug\net10.0\GameAP.csproj.CoreCompileInputs.cache
+C:\Users\denni\Downloads\APComp-main\src\C#\GameAP\obj\Debug\net10.0\GameAP.dll
+C:\Users\denni\Downloads\APComp-main\src\C#\GameAP\obj\Debug\net10.0\refint\GameAP.dll
+C:\Users\denni\Downloads\APComp-main\src\C#\GameAP\obj\Debug\net10.0\GameAP.pdb
+C:\Users\denni\Downloads\APComp-main\src\C#\GameAP\bin\Debug\net10.0\GameAP.exe
+C:\Users\denni\Downloads\APComp-main\src\C#\GameAP\bin\Debug\net10.0\GameAP.deps.json
+C:\Users\denni\Downloads\APComp-main\src\C#\GameAP\bin\Debug\net10.0\GameAP.runtimeconfig.json
+C:\Users\denni\Downloads\APComp-main\src\C#\GameAP\bin\Debug\net10.0\GameAP.dll
+C:\Users\denni\Downloads\APComp-main\src\C#\GameAP\bin\Debug\net10.0\GameAP.pdb
+C:\Users\denni\Downloads\APComp-main\src\C#\GameAP\obj\Debug\net10.0\GameAP.genruntimeconfig.cache
+C:\Users\denni\Downloads\APComp-main\src\C#\GameAP\obj\Debug\net10.0\ref\GameAP.dll

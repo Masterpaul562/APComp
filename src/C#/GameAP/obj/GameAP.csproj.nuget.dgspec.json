@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\denni\\Downloads\\APComp-main\\src\\C#\\TerminalDotsGame\\GameAP\\GameAP.csproj": {}
+    "C:\\Users\\denni\\Downloads\\APComp-main\\src\\C#\\GameAP\\GameAP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\denni\\Downloads\\APComp-main\\src\\C#\\TerminalDotsGame\\GameAP\\GameAP.csproj": {
+    "C:\\Users\\denni\\Downloads\\APComp-main\\src\\C#\\GameAP\\GameAP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\denni\\Downloads\\APComp-main\\src\\C#\\TerminalDotsGame\\GameAP\\GameAP.csproj",
+        "projectUniqueName": "C:\\Users\\denni\\Downloads\\APComp-main\\src\\C#\\GameAP\\GameAP.csproj",
         "projectName": "GameAP",
-        "projectPath": "C:\\Users\\denni\\Downloads\\APComp-main\\src\\C#\\TerminalDotsGame\\GameAP\\GameAP.csproj",
+        "projectPath": "C:\\Users\\denni\\Downloads\\APComp-main\\src\\C#\\GameAP\\GameAP.csproj",
         "packagesPath": "C:\\Users\\denni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\denni\\Downloads\\APComp-main\\src\\C#\\TerminalDotsGame\\GameAP\\obj\\",
+        "outputPath": "C:\\Users\\denni\\Downloads\\APComp-main\\src\\C#\\GameAP\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\denni\\AppData\\Roaming\\NuGet\\NuGet.Config"

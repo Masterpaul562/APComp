@@ -3,10 +3,8 @@
 class Entry
 {
 
-    static Player player1;
-    static Player player2;
-    static char[] horizontalStripe = new char[10] { '|', '|', '|', '|', '|', '|', '|', '|', '|', '|' };
-    static List<char[]> stripeCollection = new List<char[]>();
+    static List <Player> players = new List<Player>();
+   
     static bool playerOneTurn = true;
 
 
@@ -14,150 +12,177 @@ class Entry
 
     static void Display()
     {
-            char[] player2Line = new char[10] { '|', '|', '|', '|', '|', '|', '|', '|', '|', '|' };
-            char[] player1Line = new char[10] { '|', '|', '|', '|', '|', '|', '|', '|', '|', '|' };
-            char[] sameLine = new char[10] { '|', '|', '|', '|', '|', '|', '|', '|', '|', '|' };
-        bool sameY = player1.y == player2.y ? true:false;
-        
+        char[] horizontalStripe = new char[10] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+        List<char[]> stripeCollection = new List<char[]>();
 
+           for (int i = 0; i < 10; i++)
+        {
+            stripeCollection.Add(horizontalStripe);
+        }  
+        
+       // bool sameY = true;
+           //  for(int t = 0; t < players.Count; t++)
+          //  {
+                Player player = players[0];
+                stripeCollection[player.y][player.x] = player.symbol;
+                Console.WriteLine("Position: " + player.x + " " + player.y);
+          //  }
+            
         for (int i = 0; i < stripeCollection.Count; i++)
         {
+            //  for (int j = 0; j < 10; j++)
+            // {
+            //     Console.Write(stripeCollection[j][i]);
+            // }
+            // for(int t = 0; t < players.Count; t++)
+            // {
+            //     Player player = players[t];
+            //     if(player.y == i )
+            //     {
+            //         for (int j = 0; j < 10; j++)
+            //          {
+
+            //                 if (player.x==j )
+            //                 {
+            //                   
+            //                   j= 1000;
+                        
+            //                  }
+            //          }
+            //     }
+            // }
             
             
-            if (i == player1.y)
-            {
+             string wholeLine = new string(stripeCollection[i]);
 
-                for (int j = 0; j < 10; j++)
-                {
+            Console.WriteLine(wholeLine);
+        }
+        // if (playerOneTurn)
+        // {
+        //    // Player1Move();
+        // }
+        // else
+        // {
+        //    // Player2Move();
+        // }
+            // if (i == player2.y)
+            // {
 
-                    if (j == player1.x)
-                    {
-                        player1Line[j] = player1.symbol;
-                        sameLine[j] = player1.symbol;
-                    }
-                }
-            }
-            if (i == player2.y)
-            {
+            //     for (int j = 0; j < 10; j++)
+            //     {
 
-                for (int j = 0; j < 10; j++)
-                {
-
-                    if (j == player2.x)
-                    {
-                        player2Line[j] = player2.symbol;
-                        sameLine[j] = player2.symbol;
-                    }
-                }
-            }
+            //         if (j == player2.x)
+            //         {
+            //             player2Line[j] = player2.symbol;
+            //             sameLine[j] = player2.symbol;
+            //         }
+            //     }
+            // }
         
 
-            if (i == player2.y && !sameY)
-            {
-                string playerWhole = new string(player2Line);
-                Console.WriteLine(playerWhole);
-            }
-            else if (i == player1.y && !sameY)
-            {
-                string playerWhole = new string(player1Line);
-                Console.WriteLine(playerWhole);
-            }else if ( i == player1.y && sameY)
-            {
-                string playerWhole = new string(sameLine);
-                Console.WriteLine(playerWhole);
-            }
-            else
-            {
-                string wholeLine = new string(stripeCollection[i]);
+            // if (i == player2.y && !sameY)
+            // {
+            //     string playerWhole = new string(player2Line);
+            //     Console.WriteLine(playerWhole);
+            // }
+            // else if (i == player1.y && !sameY)
+            // {
+            //     string playerWhole = new string(player1Line);
+            //     Console.WriteLine(playerWhole);
+            // }else if ( i == player1.y && sameY)
+            // {
+            //     string playerWhole = new string(sameLine);
+            //     Console.WriteLine(playerWhole);
+            // }
+            // else
+            // {
+            //     string wholeLine = new string(stripeCollection[i]);
 
-                Console.WriteLine(wholeLine);
-            }
-        }
+            //     Console.WriteLine(wholeLine);
+            // }
+     
         //Console.WriteLine(player1.x +" " + player1.y);
         //Console.WriteLine(player2.x +" " + player2.y);
-        if (playerOneTurn)
-        {
-            Player1Move();
-        }
-        else
-        {
-            Player2Move();
-        }
+        
     }
 
 
     static void EntryWelcome()
     {
+       
 
-
-        for (int i = 0; i < 10; i++)
-        {
-            stripeCollection.Add(horizontalStripe);
-        }
-
-
-        Console.WriteLine("Choose Player1 name");
-        string name = Console.ReadLine() ?? string.Empty;
-        if (name == String.Empty)
-        {
-            name = "Player1";
-        }
-        player1.SetName(name);
-       CharacterSelect(player1);
-        // Put character select
-
-        Console.WriteLine("Choose Player2 name");
-        name = Console.ReadLine() ?? string.Empty;
-        if (name == String.Empty)
-        {
-            name = "Player2";
-        }
-        player2.SetName(name);
-        CharacterSelect(player2);
-
-        if(player1.symbol == player2.symbol)
-        {
-            //Check this if it doesn't work
-            if(player2 is Wizard)
-            {
-               player2.symbol = '!' ;
-            }else if (player2 is Knight)
-            {
-                player2.symbol = '@' ;
-            }else if (player2 is Archer)
-            {
-                player2.symbol = '$' ;
-            }
-        }
-        Console.WriteLine(player1.name + " = " + player1.symbol);
-        Console.WriteLine(player2.name + " = " + player2.symbol);
+      
+            CharacterSelect();
+            
+        
 
     }
-    static void Player1Move()
-    {
+        // Console.WriteLine("Choose Player1 name");
+        // string name = Console.ReadLine() ?? string.Empty;
+        // if (name == String.Empty)
+        // {
+        //     name = "Player1";
+        // }
+      
         
-        if(player1.Move(Console.ReadLine() ?? string.Empty,player2) == false)
-        {
-            Player1Move();
-            return;
-        } 
-        playerOneTurn = false;
+        // player1.SetName(name);
         
-        Display();
+        // // Put character select
+
+        // Console.WriteLine("Choose Player2 name");
+        // name = Console.ReadLine() ?? string.Empty;
+        // if (name == String.Empty)
+        // {
+        //     name = "Player2";
+        // }
         
-    }
-    static void Player2Move()
-    {
-        if(player2.Move(Console.ReadLine() ?? string.Empty,player1) == false)
-        {
-            Player2Move();
-            return;
-        }
-        playerOneTurn = true;
         
-        Display();
+        // player2.SetName(name);
         
-    }
+
+        // if(player1.symbol == player2.symbol)
+        // {
+        //     //Check this if it doesn't work
+        //     if(player2 is Wizard)
+        //     {
+        //        player2.symbol = '?' ;
+        //     }else if (player2 is Knight)
+        //     {
+        //         player2.symbol = '@' ;
+        //     }else if (player2 is Archer)
+        //     {
+        //         player2.symbol = '$' ;
+        //     }
+        // }
+        // Console.WriteLine(player1.name + " = " + player1.symbol);
+        // Console.WriteLine(player2.name + " = " + player2.symbol);
+
+    
+    // static void Player1Move()
+    // {
+        
+    //     if(player1.Move(Console.ReadLine() ?? string.Empty,player2) == false)
+    //     {
+    //         Player1Move();
+    //         return;
+    //     } 
+    //     playerOneTurn = false;
+        
+    //     Display();
+        
+    // }
+    // static void Player2Move()
+    // {
+    //     if(player2.Move(Console.ReadLine() ?? string.Empty,player1) == false)
+    //     {
+    //         Player2Move();
+    //         return;
+    //     }
+    //     playerOneTurn = true;
+        
+    //     Display();
+        
+    // }
 
     // static void DamageCheck(bool isPlayerOne)
     // {
@@ -186,24 +211,44 @@ class Entry
     //         }
     //     }
     // }
-    static void CharacterSelect(Player selectedPlayer)
+    static void CharacterSelect()
     {
-        Console.WriteLine("Select Character");
-        Console.WriteLine("Wizard, Knight, or Archer");
-        string character = Console.ReadLine() ?? wizard;  
-        if(character == "wizard" || character == "Wizard" || character == "w")
+       for(int i = 0; i < 2; i++)
         {
-            selectedPlayer = new Wizard();
-            selectedPlayer.symbol = '&'; 
-        }else if (character == "knight" || character == "Knight" || character == "k")
-        {
-            selectedPlayer = new Knight();
-            selectedPlayer.symbol = '#';
-        }else if (character == "archer" || character == "Archer" || character == "a")
-        {
-            selectedPlayer = new Archer();
-            selectedPlayer.symbol = '%';
+            Console.WriteLine("Choose Player"+ (i+1) +" name");
+            string name = Console.ReadLine() ?? string.Empty;
+            if (name == String.Empty)
+            {
+                name = "Player1";
+            }
+            
+           Console.WriteLine("Select Character");
+           Console.WriteLine("Wizard, Knight, or Archer");
+            string character = Console.ReadLine() ?? "wizard";  
+            if(character == "wizard" || character == "Wizard" || character == "w")
+            {
+                players.Add(new Wizard());
+                players[i].symbol = '+';
+                players[i].name = name;
+           
+             
+            }else if (character == "knight" || character == "Knight" || character == "k")
+            {
+                players.Add(new Knight());
+                players[i].symbol = '#';
+                players[i].name = name;
+
+             }else if (character == "archer" || character == "Archer" || character == "a")
+             {
+                players.Add(new Archer());
+                players[i].symbol = '$';
+                players[i].name = name;
+             }else
+             {
+                
+             }
         }
+        //Console.WriteLine(players[0].x + " " + players[0].y + " " + players[0] + "YAY");
     }
     static void Main(string[] args)
     {
