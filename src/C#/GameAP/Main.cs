@@ -268,7 +268,7 @@ class Entry
                 Turn();
                 return;
             }
-            
+            player.SpecialMove("Player" + i);
         }
        
         DeathCheck();
