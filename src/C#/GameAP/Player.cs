@@ -102,7 +102,7 @@ public bool Input(string input,List <Player> otherPlayers, int selfIndex)
       
      
       otherPlayers.RemoveAt(selfIndex);
-     CollisionCheck(otherPlayers);
+     CollisionCheck(otherPlayers, selfIndex);
      return true;
         
         // if(player1.x == player2.x && player1.y == player2.y)
@@ -122,7 +122,7 @@ public bool Input(string input,List <Player> otherPlayers, int selfIndex)
             
         // }
     }
-    private void CollisionCheck(List<Player> otherPlayers)
+    private void CollisionCheck(List<Player> otherPlayers, int selfIndex)
     {
           for(int i = 0; i<otherPlayers.Count; i++)
         {
