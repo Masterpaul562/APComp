@@ -61,8 +61,8 @@ public bool Input(string input,List <Player> otherPlayers, int selfIndex)
     {
         
         
-        //otherPlayers.RemoveAt(selfIndex);
-        //this is a problem ^ needs fixing
+        otherPlayers.RemoveAt(selfIndex);
+      
 
         if(input == "a" || input == "A")
         {
@@ -95,11 +95,12 @@ public bool Input(string input,List <Player> otherPlayers, int selfIndex)
         }
         else 
         {
+        otherPlayers.Insert(selfIndex,this);
         return false;  
         }
        // CollisionCheck(otherPlayers);
       
-
+     otherPlayers.Insert(selfIndex,this);
      return true;
         
         // if(player1.x == player2.x && player1.y == player2.y)
