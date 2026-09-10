@@ -4,7 +4,7 @@ class Entry
 {
 
     static List <Player> players = new List<Player>();
-   
+   static int turnNumber;
 
 
 
@@ -256,7 +256,7 @@ class Entry
     }
     static void Turn()
     {
-        
+        turnNumber++;
         for(int i = 0; i < players.Count; i++)
         {
             Console.WriteLine(i + "YA" + players.Count);
@@ -268,11 +268,15 @@ class Entry
                 Turn();
                 return;
             }
-            player.SpecialMove("Player" + i);
+            player.SpecialMove(player.name);
         }
        
         DeathCheck();
+        if(turnNumber>= players.Count)
+        {
+            turnNumber = 0;
         Display();
+        }
     }
 
    static void DeathCheck()
